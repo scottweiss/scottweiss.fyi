@@ -3,11 +3,19 @@ var sass = require('gulp-sass');
 var rename = require('gulp-rename');
 var concat = require('gulp-concat');
 var nano = require('gulp-cssnano');
-var livereload = require('gulp-livereload');
+var browserSync = require('browser-sync').create();
 
-livereload({ start: true })
+// Static server
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+});
 
-gulp.task('default', function () {
+
+gulp.task('sass', function () {
   return gulp.src(['./scss/main.scss'])
   .pipe(sass())
   .pipe(rename('fyi.css'))
@@ -15,10 +23,21 @@ gulp.task('default', function () {
   .pipe(concat('fyi.min.css'))
   .pipe(nano())
   .pipe(gulp.dest('./css'))
-  .pipe(livereload());
+  .pipe(browserSync.stream());
 });
 
-gulp.task('watch', function () {
-    livereload.listen();
-    gulp.watch('./scss/**/*.scss', ['default']);
+
+// Static Server + watching scss/html files
+gulp.task('serve', ['sass'], function() {
+
+    browserSync.init({
+        server: "./"
+    });
+
+    gulp.watch("./scss/*.scss", ['sass']);
+    gulp.watch("./*.html").on('change', browserSync.reload);
 });
+
+
+
+gulp.task('default', ['serve']);

@@ -1,3 +1,49 @@
+$cyan: desaturate(cyan, 40);
+$magenta: desaturate(magenta, 40);
+$yellow: desaturate(yellow, 35);
+
+@import "afterdark";
+
+// font-family: 'Exo 2', sans-serif;
+// font-family: 'Press Start 2P', cursive;
+*{
+    transition: all 500ms;
+}
 body{
-    background: blue;
+    background: url(../img/ep_naturalblack.png);
+    color: white;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.about{
+    background: $cyan;
+}
+
+.something{
+    background: $magenta;
+}
+
+.else{
+    background: $yellow;
+}
+
+.title{
+    &-for{
+        font-size: 40px;
+        text-shadow: -3px 2px $cyan;
+    }
+    &-your{
+        font-size: 40px;
+        text-shadow: -3px 2px $magenta;
+    }
+    &-information{
+        font-size: 40px;
+        text-shadow: -3px 2px  $yellow;
+    }
+}
+
+footer{
+    height: 800px;
+    overflow: hidden;
+    position: relative;
 }
