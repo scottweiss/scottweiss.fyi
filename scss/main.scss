@@ -7,10 +7,10 @@ $yellow: desaturate(yellow, 35);
 // font-family: 'Exo 2', sans-serif;
 // font-family: 'Press Start 2P', cursive;
 *{
-    transition: all 500ms;
+    // transition: all 500ms;
 }
 body{
-    background: url(../img/ep_naturalblack.png);
+    // background: url(../img/ep_naturalblack.png);
     color: white;
     font-family: 'Exo 2', sans-serif;
 }
@@ -26,24 +26,58 @@ body{
 .else{
     background: $yellow;
 }
-
+.awesome-guy{
+    font-size: 80px;
+    line-height: 1em;
+}
 .title{
-    &-for{
-        font-size: 40px;
+    font-size: 60px;
+    line-height: 1em;
+    > *{
+        display: inline-block;
+    }     
+
+    &__for{
+
         text-shadow: -3px 2px $cyan;
     }
-    &-your{
-        font-size: 40px;
+    &__your{
+        // margin-left: 1.4em;     
         text-shadow: -3px 2px $magenta;
     }
-    &-information{
-        font-size: 40px;
+    &__information{
+        // margin-left: 3.3em;   
         text-shadow: -3px 2px  $yellow;
     }
 }
-
+header{
+    background: url(../img/dvsup.png);
+    padding: 30px 0 50px;
+    // background-color: #333;
+    // color: #333;
+}
 footer{
-    height: 800px;
+    background: url(../img/ep_naturalblack.png);
+     
+   
+
+    // height: 800px;
     overflow: hidden;
     position: relative;
+}
+
+.social-media{
+    padding: 30px;
+    position: relative;
+    bottom: 0;
+    display: inline-block;
+    z-index: 10;
+    // background: radial-gradient(white, transparent);
+    // overflow: visible;
+    a{
+        font-size: 42px;
+        display: block;
+        width: 1em;
+
+    }
 }
