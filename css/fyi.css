@@ -22,6 +22,21 @@
   height: 96px;
   background-image: url("../img/doge.png"); }
 
+.baby {
+  position: absolute;
+  width: 75px;
+  height: 96px;
+  background-size: cover;
+  background-image: url("../img/dancing-baby.gif"); }
+
+.l-shark {
+  position: absolute;
+  width: 135px;
+  height: 141px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/left-shark.gif"); }
+
 /**
      * Toaster Animations
      *
@@ -145,31 +160,31 @@
 /* Top edge, from right to left */
 .p6 {
   right: -2%;
-  top: -10%; }
+  top: -50%; }
 
 .p7 {
   right: 10%;
-  top: -12%; }
+  top: -42%; }
 
 .p8 {
   right: 20%;
-  top: -18%; }
+  top: -29%; }
 
 .p9 {
   right: 30%;
-  top: -13%; }
+  top: -33%; }
 
 .p10 {
   right: 40%;
-  top: -17%; }
+  top: -27%; }
 
 .p11 {
   right: 50%;
-  top: -11%; }
+  top: -25%; }
 
 .p12 {
   right: 60%;
-  top: -20%; }
+  top: -60%; }
 
 /* Right side, from top to bottom */
 .p13 {
@@ -200,7 +215,7 @@
 
 .p19 {
   right: 10%;
-  top: -20%; }
+  top: -26%; }
 
 .p20 {
   right: 20%;
@@ -208,7 +223,7 @@
 
 .p21 {
   right: 30%;
-  top: -24%; }
+  top: -29%; }
 
 .p22 {
   right: 40%;
@@ -380,11 +395,12 @@ header {
 
 footer {
   background: url(../img/ep_naturalblack.png);
+  height: 800px;
   overflow: hidden;
   position: relative; }
 
 .social-media {
-  padding: 30px;
+  padding: 45px 30px;
   position: relative;
   bottom: 0;
   display: inline-block;
@@ -393,3 +409,5 @@ footer {
     font-size: 42px;
     display: block;
     width: 1em; }
+    .social-media a + a {
+      margin-top: 10px; }

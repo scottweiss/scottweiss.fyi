@@ -29,10 +29,12 @@ body{
 .awesome-guy{
     font-size: 80px;
     line-height: 1em;
+
 }
 .title{
     font-size: 60px;
     line-height: 1em;
+
     > *{
         display: inline-block;
     }     
@@ -61,13 +63,13 @@ footer{
      
    
 
-    // height: 800px;
+    height: 800px;
     overflow: hidden;
     position: relative;
 }
 
 .social-media{
-    padding: 30px;
+    padding: 45px 30px;
     position: relative;
     bottom: 0;
     display: inline-block;
@@ -78,6 +80,9 @@ footer{
         font-size: 42px;
         display: block;
         width: 1em;
+        & + a{
+            margin-top: 10px;
+        }
 
     }
 }

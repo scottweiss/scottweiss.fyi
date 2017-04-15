@@ -18,11 +18,26 @@
     }
     .doge{
       position: absolute;
-
       width: 96px;
       height: 96px;
       background-image: url("../img/doge.png");
     }
+    .baby{
+      position: absolute;
+      width: 75px;
+      height: 96px;
+      background-size: cover;
+      background-image: url("../img/dancing-baby.gif");
+    }
+    .l-shark{
+      position: absolute;
+      width: 135px;
+      height: 141px;
+      background-size: cover;
+      background-position: center;
+      background-image: url("../img/left-shark.gif");
+    }
+
      
     /**
      * Toaster Animations
@@ -146,13 +161,13 @@
      */
     /* Batch 1 (-10% to -20%) */
     /* Top edge, from right to left */
-    .p6 { right: -2%; top: -10%; }
-    .p7 { right: 10%; top: -12%; }
-    .p8 { right: 20%; top: -18%; }
-    .p9 { right: 30%; top: -13%; }
-    .p10 { right: 40%; top: -17%; }
-    .p11 { right: 50%; top: -11%; }
-    .p12 { right: 60%; top: -20%; }
+    .p6 { right: -2%; top: -50%; }
+    .p7 { right: 10%; top: -42%; }
+    .p8 { right: 20%; top: -29%; }
+    .p9 { right: 30%; top: -33%; }
+    .p10 { right: 40%; top: -27%; }
+    .p11 { right: 50%; top: -25%; }
+    .p12 { right: 60%; top: -60%; }
     /* Right side, from top to bottom */
     .p13 { right: -10%; top: 10%; }
     .p14 { right: -13%; top: 20%; }
@@ -163,9 +178,9 @@
     /* Batch 2 (-20% to -40%) */
     /* Top edge, from right to left */
     .p18 { right: 0%; top: -26%; }
-    .p19 { right: 10%; top: -20%; } 
+    .p19 { right: 10%; top: -26%; } 
     .p20 { right: 20%; top: -36%; }
-    .p21 { right: 30%; top: -24%; }
+    .p21 { right: 30%; top: -29%; }
     .p22 { right: 40%; top: -33%; }
     .p23 { right: 60%; top: -40%; }
     /* Right side, from top to bottom */
