@@ -6,9 +6,17 @@ title: soundboard
     header{display: none;}
     footer{display: none;}
     .soundboard{ display: flex; 
-        flex-basis: 33%;
+        justify-content: space-between;
+            flex-direction: row;
+    flex-wrap: wrap;
+        /* flex-basis: 33%; */
         }
-    .soundboard a{ flex-basis: 33%; }
+    .soundboard a{  flex-basis: 33%;   }
+    .soundboard a img{
+        margin: 0 auto;
+    display: block;
+    margin-bottom: 30px;
+    }
  </style>
 
  <div class="soundboard">
@@ -31,7 +39,7 @@ title: soundboard
      <audio id="crickets" src="/sounds/crickets.wav" autostart="false" ></audio>
      <audio id="doorbell" src="/sounds/doorbell.wav" autostart="false" ></audio>
      <audio id="drama" src="/sounds/drama.wav" autostart="false" ></audio>
-     <audio id="drumroll" src="/sounds/drumbroll.wav" autostart="false" ></audio>
+     <audio id="drumroll" src="/sounds/drumroll.wav" autostart="false" ></audio>
      <audio id="fanfare" src="/sounds/fanfare.wav" autostart="false" ></audio>
      <audio id="gong" src="/sounds/gong.wav" autostart="false" ></audio>
      <audio id="laughter" src="/sounds/laughter.wav" autostart="false" ></audio>
@@ -53,6 +61,10 @@ title: soundboard
       }
           function PlayDoorbell() {
           var sound = document.getElementById("doorbell");
+          sound.play()
+      }
+        function PlayDrumroll() {
+          var sound = document.getElementById("drumroll");
           sound.play()
       }
           function PlayDrama() {
