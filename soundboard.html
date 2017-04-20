@@ -1,0 +1,86 @@
+---
+layout: default
+title: soundboard
+---
+<style type="text/css" media="screen">
+    header{display: none;}
+    footer{display: none;}
+    .soundboard{ display: flex; 
+        flex-basis: 33%;
+        }
+    .soundboard a{ flex-basis: 33%; }
+ </style>
+
+ <div class="soundboard">
+   <a onclick="PlayApplause()">  <img src="/img/applause.png" alt=""></a>
+   <a onclick="PlayCash()">  <img src="/img/chaching.png" alt=""></a>
+   <a onclick="PlayCrickets()">  <img src="/img/crickets.png" alt=""></a>
+   <a onclick="PlayDoorbell()">  <img src="/img/doorbell.png" alt=""></a>
+   <a onclick="PlayDrama()">  <img src="/img/drama.png" alt=""></a>
+   <a onclick="PlayDrumroll()">  <img src="/img/drumroll.png" alt=""></a>
+   <a onclick="PlayFanfare()">  <img src="/img/fanfare.png" alt=""></a>
+   <a onclick="PlayGong()">  <img src="/img/gong.png" alt=""></a>
+   <a onclick="PlayLaughter()">  <img src="/img/laughter.png" alt=""></a>
+   <a onclick="PlayRimshot()">  <img src="/img/rimshot.png" alt=""></a>
+   <a onclick="PlaySad()">  <img src="/img/sadtrombone.png" alt=""></a>
+   <a onclick="PlayClock()">  <img src="/img/ticking-clock.png" alt=""></a>
+
+ </div>
+    <audio id="applause" src="/sounds/applause.wav" autostart="false" ></audio>
+     <audio id="cash-register" src="/sounds/cash-register.wav" autostart="false" ></audio>
+     <audio id="crickets" src="/sounds/crickets.wav" autostart="false" ></audio>
+     <audio id="doorbell" src="/sounds/doorbell.wav" autostart="false" ></audio>
+     <audio id="drama" src="/sounds/drama.wav" autostart="false" ></audio>
+     <audio id="drumroll" src="/sounds/drumbroll.wav" autostart="false" ></audio>
+     <audio id="fanfare" src="/sounds/fanfare.wav" autostart="false" ></audio>
+     <audio id="gong" src="/sounds/gong.wav" autostart="false" ></audio>
+     <audio id="laughter" src="/sounds/laughter.wav" autostart="false" ></audio>
+     <audio id="rimshot" src="/sounds/rimshot.wav" autostart="false" ></audio>
+     <audio id="sad-trombone" src="/sounds/sad-trombone.wav" autostart="false" ></audio>
+     <audio id="ticking-clock" src="/sounds/ticking-clock.wav" autostart="false" ></audio>
+    <script>
+    function PlayApplause() {
+          var sound = document.getElementById("applause");
+          sound.play()
+      }
+          function PlayCash() {
+          var sound = document.getElementById("cash-register");
+          sound.play()
+      }
+          function PlayCrickets() {
+          var sound = document.getElementById("crickets");
+          sound.play()
+      }
+          function PlayDoorbell() {
+          var sound = document.getElementById("doorbell");
+          sound.play()
+      }
+          function PlayDrama() {
+          var sound = document.getElementById("drama");
+          sound.play()
+      }
+          function PlayFanfare() {
+          var sound = document.getElementById("fanfare");
+          sound.play()
+      }
+          function PlayGong() {
+          var sound = document.getElementById("gong");
+          sound.play()
+      }
+          function PlayLaughter() {
+          var sound = document.getElementById("laughter");
+          sound.play()
+      }
+          function PlayRimshot() {
+          var sound = document.getElementById("rimshot");
+          sound.play()
+      }
+          function PlaySad() {
+          var sound = document.getElementById("sad-trombone");
+          sound.play()
+      }
+          function PlayClock() {
+          var sound = document.getElementById("ticking-clock");
+          sound.play()
+      }
+    </script>
