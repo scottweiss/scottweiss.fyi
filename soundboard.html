@@ -16,10 +16,19 @@ title: soundboard
         margin: 0 auto;
     display: block;
     margin-bottom: 30px;
+
+    }
+
+    #standup{
+        flex-basis: 100%;
+    }
+    #standup img{
+        height:  150px;
     }
  </style>
 
  <div class="soundboard">
+    <a onclick="PlayStandup()" id="standup">  <img src="/img/ludacris.jpeg" alt="standup"></a>
    <a onclick="PlayApplause()">  <img src="/img/applause.png" alt=""></a>
    <a onclick="PlayCash()">  <img src="/img/chaching.png" alt=""></a>
    <a onclick="PlayCrickets()">  <img src="/img/crickets.png" alt=""></a>
@@ -34,6 +43,7 @@ title: soundboard
    <a onclick="PlayClock()">  <img src="/img/ticking-clock.png" alt=""></a>
 
  </div>
+ <audio id="standup" src="/sounds/standup.mp3" autostart="false" ></audio>
     <audio id="applause" src="/sounds/applause.wav" autostart="false" ></audio>
      <audio id="cash-register" src="/sounds/cash-register.wav" autostart="false" ></audio>
      <audio id="crickets" src="/sounds/crickets.wav" autostart="false" ></audio>
@@ -47,6 +57,10 @@ title: soundboard
      <audio id="sad-trombone" src="/sounds/sad-trombone.wav" autostart="false" ></audio>
      <audio id="ticking-clock" src="/sounds/ticking-clock.wav" autostart="false" ></audio>
     <script>
+    function PlayStandup() {
+          var sound = document.getElementById("standup");
+          sound.play()
+      }
     function PlayApplause() {
           var sound = document.getElementById("applause");
           sound.play()
