@@ -11,10 +11,16 @@ $yellow: desaturate(yellow, 35);
 }
 body{
     // background: url(../img/ep_naturalblack.png);
-    color: white;
-    font-family: 'Exo 2', sans-serif;
+    color: #16161d;
+    // font-family: 'Exo 2', sans-serif;
 }
-
+header{
+    font-family: 'Exo 2', sans-serif;
+    color: white;
+}
+h1{
+        font-family: 'Exo 2', sans-serif;
+}
 .about{
     background: $cyan;
 }
@@ -53,9 +59,9 @@ body{
     }
 }
 header{
-    background: url(../img/dvsup.png);
+    // background: url(../img/dvsup.png);
     padding: 30px 0 50px;
-    // background-color: #333;
+    background-color: #16161d;
     // color: #333;
 }
 footer{
@@ -86,3 +92,5 @@ footer{
 
     }
 }
+
+@import "blog";

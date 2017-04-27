@@ -17,7 +17,9 @@ title: Scott Weiss
            <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h1>Experience</h1>
+                        <h1>Quick Projects</h1>
+                        <p>We all have a bunch of one-off projects. Here's my collection:</p>
+                        <a href="/soundboard.html">Google Effects Soundboard</a>
                       <!--   <article>
                             <h2>Tembo Inc</h2>
                             <h3>Frontend Developer</h3>
@@ -97,10 +99,16 @@ title: Scott Weiss
            <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h1>Projects</h1>
-                        <article>
-                            <a href="/soundboard.html">Google Effects Soundboard</a>
-                        </article>
+                        <h1>Blog</h1>
+                  
+                        <ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
+      {{ post.excerpt }}
+    </li>
+  {% endfor %}
+</ul>
                   
                     </div>
                 </div>

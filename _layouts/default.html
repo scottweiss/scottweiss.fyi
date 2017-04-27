@@ -1,23 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>{{ page.title }}</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Exo+2:800|Press+Start+2P" rel="stylesheet">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-        <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
-        
-        <link rel="stylesheet" href="/css/fyi.min.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    </head>
+   {% include html-head.html %}
     <body>
         <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
@@ -39,92 +22,8 @@
         </header>
        {{  content  }}
 
-        <footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12"><div class="social-media">
-            <a href="//facebook.com/scott.a.weiss" target="_blank"><i class="fa fa-facebook"></i></a>
-             <a href="//twitter.com/ScottWeiss" target="_blank"><i class="fa fa-twitter"></i></a>
-              <a href="//www.linkedin.com/in/weissscott/" target="_blank"><i class="fa fa-linkedin"></i></a>
-        </div></div>
-        </div>
-    </div>
-        
-            <!-- First group of objects -->  
-            <div class="nyancat tst1 p15"></div>
-            <div class="toaster t1 p6"></div>
-            <div class="toaster t3 p7"></div>
-            <div class="doge tst1 p8"></div>
-            <div class="toaster t3 p9"></div>
-            <div class="toaster t1 p11"></div>
-            <div class="toaster t3 p12"></div>
-            <div class="toaster t2 p13"></div>
-            <div class="toast tst3 p14"></div>
-            <div class="toast tst2 p16"></div>
-            <div class="toaster t1 p17"></div>
-            <div class="toast tst2 p19"></div>
-            <div class="doge tst3 p20"></div>
-            <div class="toaster t2 p21"></div>
-            <div class="toast tst1 p24"></div>
-            <div class="toaster t1 p22"></div>  
-            <div class="toast tst2 p26"></div>
-            <div class="toaster t1 p28"></div>
-            <div class="toast tst2 p30"></div>
-            <div class="toaster t2 p31"></div>
-            <div class="toaster t1 p32"></div>
-            <div class="toast tst3 p33"></div>
-
-            <!-- wave 1 of (fast delayed) objects -->
-            <div class="toaster t4 p27"></div>  
-            <div class="toaster t4 p10"></div>
-            <div class="toaster t4 p25"></div>
-            <div class="nyancat tst1 p29"></div>
-              
-            <!-- wave 2 of (delayed) objects -->  
-            <div class="toaster t5 p15"></div>
-            <div class="toaster t5 p18"></div>
-            <div class="toaster t5 p22"></div>
-                  
-            <!-- wave 3 of (delayed) objects -->
-            <div class="toaster t6 p6"></div>
-            <div class="toaster t6 p11"></div>
-            <div class="toaster t6 p15"></div>
-            <div class="toaster t6 p19"></div>
-            <div class="toaster t6 p23"></div>
-
-            <!-- wave 5 of (delayed) objects -->
-            <div class="toast tst4 p10"></div>
-            <div class="toast tst4 p23"></div>
-            <div class="nyancat tst4 p15"></div>
-            <div class="toaster t7 p7"></div>
-            <div class="baby tst2 p12"></div>
-            <div class="toaster t7 p16"></div>
-            <!-- <div class="toaster t7 p20"></div> -->
-            <div class="toaster t7 p24"></div>
-
-            <!-- wave 6 of (delayed) objects -->
-            <div class="toaster t8 p8"></div>
-            <div class="toaster t8 p13"></div>
-            <div class="l-shark tst4 p17"></div>
-            <div class="toaster t8 p25"></div>
-
-            <!-- wave 7 of (delayed) objects -->
-            <div class="toaster t9 p14"></div>
-            <div class="toaster t9 p18"></div>
-            <div class="toaster t9 p21"></div>
-            <div class="toaster t9 p26"></div> 
-            <div class="baby tst4 p20"></div>
-        </footer>
-        <script src="https://code.jquery.com/jquery-3.2.0.min.js" integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=" crossorigin="anonymous"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.0.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-        <script>
-            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
-        </script>
-        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+       {% include footer.html %}
+        {% include js.html %}
+       
     </body>
 </html>
