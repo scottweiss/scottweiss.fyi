@@ -1,13 +1,53 @@
+$tablet: 720px;
+$laptop: 1030px;
+$desktop: 1280px;
 body {
   display: grid;
-  grid-template-columns: repeat(6, [col-start] 1fr);
-  grid-template-rows: 25% 25% 25% 25%;
-  height: 100vh;
+  
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  
+  grid-template-areas:
+    "w"
+    "p"
+    "tf"
+    "as"
+    "dc";
+
+    @media (min-width: $tablet) {
+    	height: 100vh;
+grid-template-columns: repeat(6, [col-start] 1fr);
+    	  grid-template-rows: 25% 25% 25% 25%;
+  
   grid-template-areas:
     "w w w p p p"
     "w w w p p p"
     "w w w p p p"
     "w w w tf as dc";
+    	
+    }
+    @media (min-width: $laptop) {
+    	grid-template-columns: repeat(6, [col-start] 1fr);
+  		grid-template-rows: 25% 25% 25% 25%;
+  
+		  grid-template-areas:
+		    "w w w p p p"
+		    "w w w p p p"
+		    "w w w p p p"
+		    "w w w tf as dc";
+    	
+    }
+    @media (min-width: $desktop) {
+grid-template-columns: repeat(6, [col-start] 1fr);
+    	  grid-template-rows: 25% 25% 25% 25%;
+  
+  grid-template-areas:
+    "w w w p p p"
+    "w w w p p p"
+    "w w w p p p"
+    "w w w tf as dc";
+    	
+    }
 }
 #tf{
   grid-area: tf;
@@ -52,10 +92,10 @@ body {
     color: white;
 
     h1 {
-      font-size: 3vmax;
+      // font-size: 3vmax;
     }
     p {
-      font-size: 1.5vmax;
+      // font-size: 1.5vmax;
     }
   }
   > article {
