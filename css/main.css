@@ -21,12 +21,15 @@ body {
   grid-area: dc; }
 
 #work {
+  position: relative;
   grid-area: w;
-  background: blue;
-  background-image: url("https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/philadelphia-skyline-at-night-black-and-white-bw-jon-holiday.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-blend-mode: lighten; }
+  background: #f89631; }
+  #work .particles-js-canvas-el {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
 
 #personal {
   grid-area: p;

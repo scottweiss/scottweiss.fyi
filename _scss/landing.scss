@@ -8,35 +8,9 @@ body {
     "w w w p p p"
     "w w w p p p"
     "w w w tf as dc";
-  &.show-personal {
-    #work {
-      
-    }
-    #personal {
-  
-    }
-    // grid-template-areas:
-    //   "p p p p"
-    //   "p p p p"
-    //   "p p p p"
-    //   "p p p p";
-  }
-  &.show-work {
-    #work {
-    
-    }
-    #personal {
-  
-    }
-    // grid-template-areas:
-    //   "w w w w"
-    //   "w w w w"
-    //   "w w w w"
-    //   "w w w w";
-  }
 }
 #tf{
-   grid-area: tf;
+  grid-area: tf;
   background: orange;
 }
 #as{
@@ -48,13 +22,18 @@ body {
    grid-area: dc;
 }
 #work {
-
+	position: relative;
+ .particles-js-canvas-el{
+ 	position: absolute;
+ 	top: 0;
+ 	right: 0;
+ 	bottom:0;
+ 	left: 0;
+ }
   grid-area: w;
-  background: blue;
-  background-image: url("https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/philadelphia-skyline-at-night-black-and-white-bw-jon-holiday.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-blend-mode: lighten;
+  background: $tembo-orange;
+  // background-image: url("https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/philadelphia-skyline-at-night-black-and-white-bw-jon-holiday.jpg");
+
 }
 #personal {
   grid-area: p;
