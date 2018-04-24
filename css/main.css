@@ -1,340 +1,63 @@
-.toaster {
-  position: absolute;
-  width: 64px;
-  height: 64px;
-  background-image: url("../img/toaster-sprite.gif"); }
-
-.toast {
-  position: absolute;
-  width: 64px;
-  height: 64px;
-  background-image: url("../img/toast1.gif"); }
-
-.nyancat {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background-image: url("../img/nyancat.gif"); }
-
-.doge {
-  position: absolute;
-  width: 96px;
-  height: 96px;
-  background-image: url("../img/doge.png"); }
-
-.baby {
-  position: absolute;
-  width: 75px;
-  height: 96px;
-  background-size: cover;
-  background-image: url("../img/dancing-baby.gif"); }
-
-.l-shark {
-  position: absolute;
-  width: 135px;
-  height: 141px;
-  background-size: cover;
-  background-position: center;
-  background-image: url("../img/left-shark.gif"); }
-
-/**
-     * Toaster Animations
-     *
-     * There are several kinds of toaster animations, marked as t1, t2, & t3.
-     * 
-     * T1 is fastest speed
-     * T2 is mid speed & flaps out of sequence with T1
-     * T3 is the common speed 
-     * T4 is a deleyd batch going at the fastest speed
-     * T5, T6, T7, T8, & T9 are a delayed batch of toasters going at the common speed
-     */
-.t1 {
-  -webkit-animation: flap 0.2s steps(4) infinite alternate, fly 10s linear infinite;
-  animation: flap 0.2s steps(4) infinite alternate, fly 10s linear infinite; }
-
-.t2 {
-  -webkit-animation: flap 0.2s steps(4) infinite alternate-reverse, fly 16s linear infinite;
-  animation: flap 0.2s steps(4) infinite alternate-reverse, fly 16s linear infinite; }
-
-.t3 {
-  -webkit-animation: flap 0.2s steps(4) infinite alternate, fly 24s linear infinite;
-  animation: flap 0.2s steps(4) infinite alternate, fly 24s linear infinite; }
-
-.t4 {
-  -webkit-animation: flap 0.2s steps(4) infinite alternate, fly 10s 5s linear infinite;
-  animation: flap 0.2s steps(4) infinite alternate, fly 10s 5s linear infinite; }
-
-.t5 {
-  -webkit-animation: flap 0.2s steps(4) infinite alternate-reverse, fly 24s 4s linear infinite;
-  animation: flap 0.2s steps(4) infinite alternate-reverse, fly 24s 4s linear infinite; }
-
-.t6 {
-  -webkit-animation: flap 0.2s steps(4) infinite alternate, fly 24s 8s linear infinite;
-  animation: flap 0.2s steps(4) infinite alternate, fly 24s 8s linear infinite; }
-
-.t7 {
-  -webkit-animation: flap 0.2s steps(4) infinite alternate-reverse, fly 24s 12s linear infinite;
-  animation: flap 0.2s steps(4) infinite alternate-reverse, fly 24s 12s linear infinite; }
-
-.t8 {
-  -webkit-animation: flap 0.2s steps(4) infinite alternate, fly 24s 16s linear infinite;
-  animation: flap 0.2s steps(4) infinite alternate, fly 24s 16s linear infinite; }
-
-.t9 {
-  -webkit-animation: flap 0.2s steps(4) infinite alternate-reverse, fly 24s 20s linear infinite;
-  animation: flap 0.2s steps(4) infinite alternate-reverse, fly 24s 20s linear infinite; }
-
-/**
-     * Toast Animations
-     *
-     * There are several kinds of toaster animations, marked as ts1, ts2, & ts3.
-     *  
-     * Tst1 is fast
-     * Tst2 is mid speed
-     * Tst3 is the common speed
-     * Tst4 is a delayed batch of toast going at the common speed
-     */
-.tst1 {
-  -webkit-animation: fly 10s linear infinite;
-  animation: fly 10s linear infinite; }
-
-.tst2 {
-  -webkit-animation: fly 16s linear infinite;
-  animation: fly 16s linear infinite; }
-
-.tst3 {
-  -webkit-animation: fly 24s linear infinite;
-  animation: fly 24s linear infinite; }
-
-.tst4 {
-  -webkit-animation: fly 24s 12s linear infinite;
-  animation: fly 24s 12s linear infinite; }
-
-/**
-     * Starting positions of objects (both toast & toasters).
-     *  - There is a different position for each object to prevent overlapping.
-     *  - We use percentages in order to accomodate for all window dimensions.
-     *  - Use -6% as the smallest amount for remaining off-screen.
-     *  - Organized into reverse "L" shaped batches to keep a constant flow.
-     */
-/* Batch 1 (-10% to -20%) */
-/* Top edge, from right to left */
-.p6 {
-  right: -2%;
-  top: -50%; }
-
-.p7 {
-  right: 10%;
-  top: -42%; }
-
-.p8 {
-  right: 20%;
-  top: -29%; }
-
-.p9 {
-  right: 30%;
-  top: -33%; }
-
-.p10 {
-  right: 40%;
-  top: -27%; }
-
-.p11 {
-  right: 50%;
-  top: -25%; }
-
-.p12 {
-  right: 60%;
-  top: -60%; }
-
-/* Right side, from top to bottom */
-.p13 {
-  right: -10%;
-  top: 10%; }
-
-.p14 {
-  right: -13%;
-  top: 20%; }
-
-.p15 {
-  right: -17%;
-  top: 30%; }
-
-.p16 {
-  right: -15%;
-  top: 50%; }
-
-.p17 {
-  right: -20%;
-  top: 70%; }
-
-/* Batch 2 (-20% to -40%) */
-/* Top edge, from right to left */
-.p18 {
-  right: 0%;
-  top: -26%; }
-
-.p19 {
-  right: 10%;
-  top: -26%; }
-
-.p20 {
-  right: 20%;
-  top: -36%; }
-
-.p21 {
-  right: 30%;
-  top: -29%; }
-
-.p22 {
-  right: 40%;
-  top: -33%; }
-
-.p23 {
-  right: 60%;
-  top: -40%; }
-
-/* Right side, from top to bottom */
-.p24 {
-  right: -26%;
-  top: 10%; }
-
-.p25 {
-  right: -36%;
-  top: 30%; }
-
-.p26 {
-  right: -29%;
-  top: 50%; }
-
-/* Batch 3 (-40% to -60%)*/
-/* Top edge, from right to left */
-.p27 {
-  right: 0;
-  top: -46%; }
-
-.p28 {
-  right: 10%;
-  top: -56%; }
-
-.p29 {
-  right: 20%;
-  top: -49%; }
-
-.p30 {
-  right: 30%;
-  top: -60%; }
-
-/* Right side, from top to bottom */
-.p31 {
-  right: -46%;
-  top: 10%; }
-
-.p32 {
-  right: -56%;
-  top: 20%; }
-
-.p33 {
-  right: -49%;
-  top: 30%; }
-
-/* Flapping animation */
-@-webkit-keyframes flap {
-  from {
-    background-position: 0px; }
-  to {
-    background-position: -256px; } }
-
-@keyframes flap {
-  from {
-    background-position: 0px; }
-  to {
-    background-position: -256px; } }
-
-/* Gliding animation using translate */
-/* Moving 1600px, to accomodate for large screens */
-@-webkit-keyframes fly {
-  from {
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    transform: translate(0, 0); }
-  to {
-    -webkit-transform: translate(-1600px, 1600px);
-    -ms-transform: translate(-1600px, 1600px);
-    transform: translate(-1600px, 1600px); } }
-
-@keyframes fly {
-  from {
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    transform: translate(0, 0); }
-  to {
-    -webkit-transform: translate(-1600px, 1600px);
-    -ms-transform: translate(-1600px, 1600px);
-    transform: translate(-1600px, 1600px); } }
-
 body {
-  color: #16161d; }
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: ([col-start] 1fr)[6];
+      grid-template-columns: repeat(6, [col-start] 1fr);
+  -ms-grid-rows: 25% 25% 25% 25%;
+      grid-template-rows: 25% 25% 25% 25%;
+  height: 100vh;
+  grid-template-areas: "w w w p p p" "w w w p p p" "w w w p p p" "w w w tf as dc"; }
 
-header {
-  font-family: 'Exo 2', sans-serif;
-  color: white; }
+#tf {
+  grid-area: tf;
+  background: orange; }
 
-h1 {
-  font-family: 'Exo 2', sans-serif; }
+#as {
+  grid-area: as;
+  background: black; }
 
-.about {
-  background: #33cccc; }
+#dc {
+  background: green;
+  grid-area: dc; }
 
-.something {
-  background: #cc33cc; }
+#work {
+  grid-area: w;
+  background: blue;
+  background-image: url("https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/philadelphia-skyline-at-night-black-and-white-bw-jon-holiday.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: lighten; }
 
-.else {
-  background: #d2d22d; }
+#personal {
+  grid-area: p;
+  background: red; }
 
-.awesome-guy {
-  font-size: 80px;
-  line-height: 1em; }
+.main-section {
+  -webkit-transition: width 200ms;
+  transition: width 200ms;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .main-section > header {
+    text-align: center;
+    padding: 10px;
+    color: white; }
+    .main-section > header h1 {
+      font-size: 3vmax; }
+    .main-section > header p {
+      font-size: 1.5vmax; }
+  .main-section > article {
+    display: none; }
 
-.title {
-  font-size: 60px;
-  line-height: 1em; }
-  .title > * {
-    display: inline-block; }
-  .title__for {
-    text-shadow: -3px 2px #33cccc; }
-  .title__your {
-    text-shadow: -3px 2px #cc33cc; }
-  .title__information {
-    text-shadow: -3px 2px #d2d22d; }
-
-header {
-  padding: 30px 0 50px;
-  background-color: #16161d; }
-
-footer {
-  background: url(../img/ep_naturalblack.png);
-  height: 800px;
-  overflow: hidden;
-  position: relative; }
-
-.social-media {
-  padding: 45px 30px;
-  position: relative;
-  bottom: 0;
-  display: inline-block;
-  z-index: 10; }
-  .social-media a {
-    font-size: 42px;
-    display: block;
-    width: 1em; }
-    .social-media a + a {
-      margin-top: 10px; }
-
-.blog h1 {
-  font-size: 80px;
-  margin-bottom: 50px; }
-
-.blog p {
-  font-size: 24px;
-  line-height: 1.8; }
+.show-personal #personal.main-section > article,
+.show-work #work.main-section > article {
+  display: block; }
