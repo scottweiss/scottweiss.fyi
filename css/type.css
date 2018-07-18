@@ -1,0 +1,60 @@
+html {
+  font-size: 0.8rem; }
+  @media screen and (min-width: 20rem) {
+    html {
+      font-size: calc-interpolation(20rem, 0.8rem, 50rem, 2rem); } }
+  @media screen and (min-width: 50rem) {
+    html {
+      font-size: 2rem; } }
+
+body {
+  line-height: 1.5rem; }
+
+p {
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem; }
+
+img {
+  float: left;
+  height: 11.4rem;
+  width: auto;
+  margin: 0;
+  margin-right: .6rem; }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 700;
+  margin-bottom: 1.5rem; }
+
+h1 {
+  font-size: 2rem;
+  line-height: 2rem;
+  margin-top: -webkit-calc((1.5rem - 2rem) + 1.5rem);
+  margin-top: calc((1.5rem - 2rem) + 1.5rem); }
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  margin-top: -webkit-calc((1.5rem - 1.5rem) + 1.5rem*2);
+  margin-top: calc((1.5rem - 1.5rem) + 1.5rem*2); }
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  margin-top: -webkit-calc((1.5rem - 1.25rem) + 1.5rem*2);
+  margin-top: calc((1.5rem - 1.25rem) + 1.5rem*2); }
+
+h4 {
+  font-size: 1rem;
+  line-height: 1rem;
+  margin-top: -webkit-calc((1.5rem - 1rem) + 1.5rem*2);
+  margin-top: calc((1.5rem - 1rem) + 1.5rem*2); }
+
+h5 {
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+  margin-top: -webkit-calc((1.5rem - 0.875rem) + 1.5rem*2);
+  margin-top: calc((1.5rem - 0.875rem) + 1.5rem*2); }

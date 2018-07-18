@@ -1,0 +1,6 @@
+@function check-contrast($color, $light: $s-color--text-light, $dark: $s-color--text-dark){
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+  @return if(($r * 0.299 + $g * 0.587 + $b * 0.114) < 186, $light, $dark)
+}

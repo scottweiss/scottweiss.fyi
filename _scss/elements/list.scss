@@ -1,0 +1,10 @@
+$e-list-font-family: $s-font-family-primary !default;
+
+ul,
+ol{
+	list-style: none;
+	font-family: $e-list-font-family;
+}
+li{
+	line-height: 1.2;
+}

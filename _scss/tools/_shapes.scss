@@ -1,0 +1,7 @@
+@mixin circle($diameter) {
+  width: $diameter; //Fallback in px
+  width: rem-calc($diameter); 
+  height: $diameter;//Fallback in px
+  height: rem-calc($diameter);
+  border-radius: 50%;
+}

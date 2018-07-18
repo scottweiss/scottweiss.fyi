@@ -1,0 +1,15 @@
+.p-hero{
+	min-height: 100vh;
+	background: darkblue;
+	&__body{
+	background: url('data:image/svg+xml,\
+		<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 50 50">\
+		<style>@keyframes heroframes %7Bto %7b transform: translateY(-100%);}}</style>\
+		<text y="50"   font-size="50" style="animation: heroframes 1s linear infinite;">💩</text>\
+		<text y="150" font-size="50" style="animation: heroframes 1s linear infinite;">💩</text>\
+		</svg>');
+	background-size: 100px 100px;
+	min-height: 100vh;
+	}
+}
+

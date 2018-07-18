@@ -1,0 +1,200 @@
+$e-h1-font-family: $s-font-family-primary !default;
+$e-h1-font-size: 38px !default;
+$e-h1-line-height: 48px !default;
+$e-h1-color: $s-color--text-dark !default;
+$e-h1-font-weight: bold !default;
+$e-h1-text-transform: none !default;
+$e-h1-letter-spacing: normal !default;
+
+$e-h2-font-family: $s-font-family-primary !default;
+$e-h2-font-size: 18px !default;
+$e-h2-line-height: 28px !default;
+$e-h2-color: $s-color--text-dark !default;
+$e-h2-font-weight: bold !default;
+$e-h2-text-transform: none !default;
+$e-h2-letter-spacing: normal !default;
+
+$e-h3-font-family: $s-font-family-primary !default;
+$e-h3-font-size: 15px !default;
+$e-h3-line-height: 24px !default;
+$e-h3-color: $s-color--text-dark !default;
+$e-h3-font-weight: bold !default;
+$e-h3-text-transform: none !default;
+$e-h3-letter-spacing: normal !default;
+
+$e-h4-font-family: $s-font-family-primary !default;
+$e-h4-font-size: 21px !default;
+$e-h4-line-height: 23px !default;
+$e-h4-color: $s-color--text-dark !default;
+$e-h4-font-weight: bold !default;
+$e-h4-text-transform: none !default;
+$e-h4-letter-spacing: normal !default;
+
+$e-h5-font-family: $s-font-family-primary !default;
+$e-h5-font-size: 21px !default;
+$e-h5-line-height: 23px !default;
+$e-h5-color: $s-color--text-dark !default;
+$e-h5-font-weight: bold !default;
+$e-h5-text-transform: none !default;
+$e-h5-letter-spacing: normal !default;
+
+$e-h6-font-family: $s-font-family-primary !default;
+$e-h6-font-size: 21px !default;
+$e-h6-line-height: 23px !default;
+$e-h6-color: $s-color--text-dark !default;
+$e-h6-font-weight: bold !default;
+$e-h6-text-transform: none !default;
+$e-h6-letter-spacing: normal !default;
+
+h1,h2,h3,h4,h5,h6 { padding: 0; margin: 0;}
+
+@if $enable-fluid-type == false{
+	h1{
+		color: $e-h1-color;
+		@include fontSize($e-h1-font-size);
+		@include lineHeight($e-h1-line-height);
+		font-weight: $e-h1-font-weight;
+		font-family: $e-h1-font-family;
+		text-transform: $e-h1-text-transform;
+
+		@if $enable-css-variables {
+			color: var(--e-h1-color, var(--s-color--text-dark, $e-h1-color));  //done
+			font-size: var(--e-h1-font-size, $e-h1-font-size); //done
+			line-height: var(--e-h1-line-height, $e-h1-line-height); //done
+			letter-spacing: var(--e-h1-letter-spacing, $e-h1-letter-spacing); //done
+			font-weight: var(--e-h1-font-weight, $e-h1-font-weight); //done
+			font-family: var(--e-h1-font-family, $e-h1-font-family);
+			text-transform: var(--e-h1-text-transform, $e-h1-text-transform); //done
+		}
+	}
+	h2{
+		color: $e-h2-color;
+		@include fontSize($e-h2-font-size);
+		@include lineHeight($e-h2-line-height);
+		font-weight: $e-h2-font-weight;
+		font-family: $e-h2-font-family;
+		text-transform: $e-h2-text-transform;
+
+		@if $enable-css-variables {
+			color: var(--e-h2-color, var(--s-color--text-dark, $e-h2-color));  //done
+			font-size: var(--e-h2-font-size, $e-h2-font-size); //done
+			line-height: var(--e-h2-line-height, $e-h2-line-height); //done
+			letter-spacing: var(--e-h2-letter-spacing, $e-h2-letter-spacing); //done
+			font-weight: var(--e-h2-font-weight, $e-h2-font-weight); //done
+			font-family: var(--e-h2-font-family, $e-h2-font-family);
+			text-transform: var(--e-h2-text-transform, $e-h2-text-transform); //done
+		}
+	}
+	h3{
+		color: $e-h3-color;
+		@include fontSize($e-h3-font-size);
+		@include lineHeight($e-h3-line-height);
+		font-weight: $e-h3-font-weight;
+		font-family: $e-h3-font-family;
+		text-transform: $e-h3-text-transform;
+
+		@if $enable-css-variables {
+			color: var(--e-h3-color, var(--s-color--text-dark, $e-h3-color));  //done
+			font-size: var(--e-h3-font-size, $e-h3-font-size); //done
+			line-height: var(--e-h3-line-height, $e-h3-line-height); //done
+			letter-spacing: var(--e-h3-letter-spacing, $e-h3-letter-spacing); //done
+			font-weight: var(--e-h3-font-weight, $e-h3-font-weight); //done
+			font-family: var(--e-h3-font-family, $e-h3-font-family);
+			text-transform: var(--e-h3-text-transform, $e-h3-text-transform); //done
+		}
+	}
+	h4{
+		color: $e-h4-color;
+		@include fontSize(21px);
+		@include lineHeight(23px);
+		font-weight: $e-h4-font-weight;
+		font-family: $e-h4-font-family;
+		text-transform: $e-h4-text-transform;
+
+		@if $enable-css-variables {
+			color: var(--e-h4-color, var(--s-color--text-dark, $e-h4-color));  //done
+			font-size: var(--e-h4-font-size, $e-h4-font-size); //done
+			line-height: var(--e-h4-line-height, $e-h4-line-height); //done
+			letter-spacing: var(--e-h4-letter-spacing, $e-h4-letter-spacing); //done
+			font-weight: var(--e-h4-font-weight, $e-h4-font-weight); //done
+			font-family: var(--e-h4-font-family, $e-h4-font-family);
+			text-transform: var(--e-h4-text-transform, $e-h4-text-transform); //done
+		}
+	}
+	h5{
+		color: $e-h5-color;
+		@include fontSize(21px);
+		@include lineHeight(23px);
+		font-weight: $e-h5-font-weight;
+		font-family: $e-h5-font-family;
+		text-transform: $e-h5-text-transform;
+
+		@if $enable-css-variables {
+			color: var(--e-h5-color, var(--s-color--text-dark, $e-h5-color));  //done
+			font-size: var(--e-h5-font-size, $e-h5-font-size); //done
+			line-height: var(--e-h5-line-height, $e-h5-line-height); //done
+			letter-spacing: var(--e-h5-letter-spacing, $e-h5-letter-spacing); //done
+			font-weight: var(--e-h5-font-weight, $e-h5-font-weight); //done
+			font-family: var(--e-h5-font-family, $e-h5-font-family);
+			text-transform: var(--e-h5-text-transform, $e-h5-text-transform); //done
+		}
+	}
+	h6{
+		color: $e-h6-color;
+		@include fontSize(21px);
+		@include lineHeight(23px);
+		font-weight: $e-h6-font-weight;
+		font-family: $e-h6-font-family;
+		text-transform: $e-h6-text-transform;
+
+		@if $enable-css-variables {
+			color: var(--e-h6-color, var(--s-color--text-dark, $e-h6-color));  //done
+			font-size: var(--e-h6-font-size, $e-h6-font-size); //done
+			line-height: var(--e-h6-line-height, $e-h6-line-height); //done
+			letter-spacing: var(--e-h6-letter-spacing, $e-h6-letter-spacing); //done
+			font-weight: var(--e-h6-font-weight, $e-h6-font-weight); //done
+			font-family: var(--e-h6-font-family, $e-h6-font-family);
+			text-transform: var(--e-h6-text-transform, $e-h6-text-transform); //done
+		}
+	}
+}
+// Change scale
+
+$s-font-size__scale-mod_1: 1.067 !default;
+$s-font-size__scale-mod_2: 1.333 !default;
+
+
+// Calculate Modular Scale
+// You don't need to calculate this with Sass 
+// You can use values from http://type-scale.com/
+// Or random values :)
+
+$s-font-size__h1-min: $s-font-size__scale-mod_1 * $s-font-size__scale-mod_1 * $s-font-size__scale-mod_1 * $s-font-size__scale-mod_1 * 1rem !default;
+$s-font-size__h1-max: $s-font-size__scale-mod_2 * $s-font-size__scale-mod_2 * $s-font-size__scale-mod_2 * $s-font-size__scale-mod_2 * 1rem !default;
+
+$s-font-size__h2-min: $s-font-size__scale-mod_1 * $s-font-size__scale-mod_1 * $s-font-size__scale-mod_1 * 1rem !default;
+$s-font-size__h2-max: $s-font-size__scale-mod_2 * $s-font-size__scale-mod_2 * $s-font-size__scale-mod_2 * 1rem !default;
+
+$s-font-size__h3-min: $s-font-size__scale-mod_1 * $s-font-size__scale-mod_1 * 1rem !default;
+$s-font-size__h3-max: $s-font-size__scale-mod_2 * $s-font-size__scale-mod_2 * 1rem !default;
+
+$s-font-size__h4-min: $s-font-size__scale-mod_1 * 1rem !default;
+$s-font-size__h4-max: $s-font-size__scale-mod_2 * 1rem !default;
+
+$s-font-size__h5-min: 1rem !default;
+$s-font-size__h5-max: 1rem !default;
+
+$s-font-size__h6-min: (1rem / $s-font-size__scale-mod_1) !default;
+$s-font-size__h6-max: (1rem / $s-font-size__scale-mod_2) !default;
+
+$s-font-size__p-min:  1rem !default;
+$s-font-size__p-max: 1rem !default;
+
+@if $enable-fluid-type{
+	h1{@include fluid-type(font-size,37.5rem, 80rem, $s-font-size__h1-min, $s-font-size__h1-max);}
+	h2{@include fluid-type(font-size,37.5rem, 80rem, $s-font-size__h2-min, $s-font-size__h2-max);}
+	h3{@include fluid-type(font-size,37.5rem, 80rem, $s-font-size__h3-min, $s-font-size__h3-max);}
+	h4{@include fluid-type(font-size,37.5rem, 80rem, $s-font-size__h4-min, $s-font-size__h4-max);}
+	h5{@include fluid-type(font-size,37.5rem, 80rem, $s-font-size__h5-min, $s-font-size__h5-max);}
+	h6{@include fluid-type(font-size, 37.5rem, 80rem, $s-font-size__h6-min, $s-font-size__h6-max);}
+}

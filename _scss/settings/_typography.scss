@@ -1,0 +1,12 @@
+/*
+Typography
+
+Styleguide 1.3
+*/
+
+$s-google-font-url:'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' !default;
+$s-font-family-primary: 'Open Sans', sans-serif!default;
+
+// styleguide:ignore:start
+@import url(#{$s-google-font-url});
+// styleguide:ignore:end

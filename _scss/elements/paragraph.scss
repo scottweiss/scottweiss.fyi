@@ -1,0 +1,66 @@
+$e-p-font-family: $s-font-family-primary !default;
+$e-p-letter-spacing: normal !default;
+$e-p-line-height: 1.5 !default;
+
+
+
+
+$e-p--missing-data-color: $s-color--gray__2 !default;
+
+$e-p--success-background: transparentize($s-color--positive, .25) !default;
+$e-p--warning-background: transparentize($s-color--neutral, .25) !default;
+$e-p--danger-background:  transparentize($s-color--negative, .25) !default;
+
+p{	
+	$self: &;
+	@if $enable-fluid-type{
+		@include fluid-type(font-size, 37.5rem, 80rem, $s-font-size__p-min, $s-font-size__p-max);
+	}
+	font-family: $e-p-font-family;
+	letter-spacing: $e-p-letter-spacing;
+	line-height: 1.5;
+
+
+		@if $enable-css-variables {
+			
+			line-height: var(--e-p-line-height, $e-p-line-height); //done
+			letter-spacing: var(--e-p-letter-spacing, $e-p-letter-spacing); //done
+			
+			font-family: var(--e-p-font-family, $e-p-font-family);
+		
+		}
+
+	+ #{$self}{
+		// margin-top: 1.5em;
+	}
+}
+
+// this probably doesnt belong here 🤷
+.p{
+	&--alert{
+		padding: 10px 15px;
+	}
+	&--success{
+		background: $e-p--success-background;
+		color: check-contrast($e-p--success-background);
+		@extend .p--alert;
+	}
+	&--warning{
+		background: $e-p--warning-background;
+		color: check-contrast($e-p--warning-background);
+		@extend .p--alert;
+	}
+	&--danger{
+		background: $e-p--danger-background;
+		color: check-contrast($e-p--danger-background);
+		@extend .p--alert;
+	}
+	&--callout{
+
+	}
+	&--missing-data{
+		color: $e-p--missing-data-color;
+		background: $s-color--gray__4;
+		@extend .p--alert;
+	}
+}

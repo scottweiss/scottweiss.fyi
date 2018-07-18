@@ -1,0 +1,19 @@
+body:before {
+  content: "smartphone";
+  display: none;
+}
+@include media-breakpoint-up(sm) {
+  body:before {
+    content: "tablet";
+  }
+}
+@include media-breakpoint-up(md) {
+  body:before {
+    content: "laptop";
+  }
+}
+@media (min-width: $screen-lg-min) {
+  body:before {
+    content: "desktop";
+  }
+}

@@ -1,0 +1,9 @@
+$e-hr-color: $s-color--gray__2 !default;
+hr{
+	border-color: $e-hr-color;
+	border-style: solid;
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+	height: 1px;
+}

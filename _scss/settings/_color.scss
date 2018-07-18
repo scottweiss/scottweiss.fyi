@@ -1,0 +1,79 @@
+/*
+Color
+
+This is where global color variable defaults are set
+These defaulted values should be set in a client theme file
+
+$s-color--text-light - default light text color
+$s-color--text-dark - default dark text color
+$s-color--gray__1 - Gray 1
+$s-color--gray__2 - Gray 2
+$s-color--gray__3 - Gray 3
+$s-color--gray__4 - Gray 4
+$s-color--positive - Color used to indicate a positive
+$s-color--negative - Color used to indicate a negative
+$s-color--neutral - Color used to indicate a neutral
+$s-color--score__a - Grade Score A
+$s-color--score__b - Grade Score B
+$s-color--score__c - Grade Score C
+$s-color--score__d - Grade Score D
+$s-color--score__f - Grade Score F
+$s-color--theme__primary - Primary Theme
+$s-data-viz-base - default for bars, pies, donuts
+$s-data-viz-empty - background for data visualizations
+
+markup:
+<div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
+
+Styleguide 1.2
+*/
+$s-color--text-light: #eee !default;
+$s-color--text-dark: #363534 !default;
+
+$s-color--gray__1: #f6f6f6 !default;
+$s-color--gray__2: #d0d0d0 !default;
+$s-color--gray__3: #999999 !default;
+$s-color--gray__4: #70777a !default;
+
+$s-color--positive: green !default;
+$s-color--negative: red !default;
+$s-color--neutral: yellow !default;
+
+$s-color--score__a: #056D05 !default;
+$s-color--score__b: #6B98FF !default;
+$s-color--score__c: #EFB653 !default;
+$s-color--score__d: #ED6200 !default;
+$s-color--score__f: #FF4935 !default;
+
+$s-color--theme__primary: #f89731 !default;
+
+$s-data-viz-base: $s-color--theme__primary !default;
+$s-data-viz-empty:$s-color--gray__2 !default;
+
+
+@if $enable-css-variables {
+	$s-color--text-light: var(--s-color--text-light, $s-color--text-light)!default;
+	$s-color--text-dark: var(--s-color--text-dark, $s-color--text-dark)!default;
+
+	$s-color--gray__1: var(--s-color--gray__1, $s-color--gray__1)!default;
+	$s-color--gray__2: var(--s-color--gray__2, $s-color--gray__2)!default;
+	$s-color--gray__3: var(--s-color--gray__3, $s-color--gray__3)!default;
+	$s-color--gray__4: var(--s-color--gray__4, $s-color--gray__4)!default;
+
+	$s-color--positive: var(--s-color--positive, $s-color--positive)!default;
+	$s-color--negative: var(--s-color--negative, $s-color--negative)!default;
+	$s-color--neutral: var(--s-color--neutral, $s-color--neutral)!default;
+
+	$s-color--score__a: var(--s-color--score__a, $s-color--score__a)!default;
+	$s-color--score__b: var(--s-color--score__b, $s-color--score__b)!default;
+	$s-color--score__c: var(--s-color--score__c, $s-color--score__c)!default;
+	$s-color--score__d: var(--s-color--score__d, $s-color--score__d)!default;
+	$s-color--score__f: var(--s-color--score__f, $s-color--score__f)!default;
+
+	$s-color--theme__primary: var(--s-color--theme__primary, $s-color--theme__primary)!default;
+
+
+	$s-data-viz-base: $s-color--theme__primary !default;
+	$s-data-viz-empty:$s-color--gray__2 !default;
+
+}

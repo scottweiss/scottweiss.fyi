@@ -1,3 +1,30 @@
-$tembo-orange: #f89631;
-// @import 'type';
-@import 'landing';
+
+@import 'settings/variables';
+@import 'settings/color';
+@import 'settings/typography';
+
+@import 'generic/reset';
+@import 'generic/box-sizing';
+
+@import 'vendor/bootstrap-4.1/bootstrap-grid.scss';
+@import 'vendor/fontawesome-pro-5.1.0-web/scss/fontawesome.scss';
+@import 'vendor/fontawesome-pro-5.1.0-web/scss/fa-regular.scss';
+@import 'vendor/fontawesome-pro-5.1.0-web/scss/fa-solid.scss';
+
+@import 'tools/calc-interpolation';
+@import 'tools/check-contrast';
+@import 'tools/fluid-type';
+@import 'tools/px-to-rem';
+@import 'tools/shapes';
+
+@import 'elements/address';
+@import 'elements/code';
+@import 'elements/headings';
+@import 'elements/hr';
+@import 'elements/img';
+@import 'elements/list';
+@import 'elements/link';
+@import 'elements/paragraph';
+
+@import 'patterns/hero';
+

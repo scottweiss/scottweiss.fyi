@@ -1,0 +1,103 @@
+$e-link-color: $s-color--theme__primary !default;
+$e-link-hover-percent: 10% !default;
+$e-link-color--hover: darken($e-link-color, $e-link-hover-percent)!default;
+$e-link-font-family: $s-font-family-primary !default;
+@mixin link($link-color, $link-color-hover) {
+	color: $link-color;
+	cursor: pointer;
+	@if($enable-e-link-growing-underline = false){
+		text-decoration: underline;
+	}
+	@if($enable-e-link-growing-underline){
+		position: relative;
+		word-wrap: break-word;
+		text-decoration: none;
+		padding-bottom: 2px;
+		background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, currentColor 50%);
+		background-position-x: 0;
+		background-position-y: calc(1em + 2px);
+		background-repeat-y: no-repeat;
+		background-repeat: repeat-x;
+		background-size: 200% 2px;
+		transition: all 700ms;
+
+		&:hover,
+		&:focus{
+			text-decoration: none;
+			background-position-x: -100%;
+		}
+
+		@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+			background-image: none;
+			&:hover{
+				text-decoration: underline !important;
+			}
+		}
+		@supports (-ms-ime-align: auto) {
+			/* Microsoft EdgeV13&14 CSS styles go here */
+			background-image: none;
+			// color: red !important;
+			&:hover{
+				text-decoration: underline !important;
+			}
+		}
+	}
+	&:hover,
+	&:focus {
+		color: $link-color-hover;
+	}
+}
+
+a,.a{
+	@include link($e-link-color, $e-link-color--hover);
+	@if $enable-fluid-type{
+		@include fluid-type(font-size, 37.5rem, 80rem, $s-font-size__p-min, $s-font-size__p-max);
+	}
+	font-family: $e-link-font-family;
+	border-image-width: 0;
+	&.not-a{
+		color: inherit;
+		text-decoration: inherit;
+		font-weight: inherit;
+		:hover{
+			color: inherit;
+			text-decoration: inherit;
+		}
+	}
+	&--arrow{
+		position: relative;
+		&:after{
+			font-family: "Font Awesome 5 Pro";
+			display: inline-block;
+			content: fa-content($fa-var-angle-right);
+			margin-left: 3px;
+			position: absolute;
+			right: -10px;
+			transition: right 700ms;
+		}
+		&:hover{
+			&:after{
+				right: -13px;
+			}
+		}
+		&-left{
+			position: relative;
+			&:before{
+				font-family: "Font Awesome 5 Pro";
+				display: inline-block;
+				position: relative;
+				content: fa-content($fa-var-angle-left);
+				left: -3px;
+				transition: left 700ms;
+			}
+			&:hover {
+				@if($enable-e-link-growing-underline){
+					background-position-x: 0;
+				}
+				&:before {
+					left: -6px;
+				}
+			}
+		} 
+	}
+}
